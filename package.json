@@ -1,0 +1,39 @@
+{
+  "name": "gbp-editor",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Please enter a description for your extension",
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-extension-interface"
+  ],
+  "icon": "extension",
+  "files": [
+    "dist"
+  ],
+  "directus:extension": {
+    "type": "interface",
+    "path": "dist/index.js",
+    "source": "src/index.ts",
+    "host": "^10.10.0"
+  },
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify",
+    "link": "directus-extension link",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@vueuse/core": "^11.2.0",
+    "quill": "^2.0.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.8.0",
+    "@directus/extensions-sdk": "12.1.2",
+    "eslint": "^9.14.0",
+    "typescript": "^5.6.3",
+    "vue": "^3.5.12"
+  }
+}
